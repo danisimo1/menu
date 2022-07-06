@@ -17,7 +17,7 @@
   </div>
 
   <div class="navigation">
-    <span class="nav" v-for="navElement in navbar" v-bind:key="navElement">{{navElement}}</span>
+    <img v-for="pic in pictures" :src="pic.src" v-bind:key="pic"><span class="nav" v-for="navElement in navbar" v-bind:key="navElement">{{navElement}}</span>
   </div>
 
 </template>
@@ -32,6 +32,11 @@ export default {
     ],
       navbar: [
         'Главное', 'Каталог', 'Landscape', 'Стройка', 'Меню'
+      ],
+      pictures: [
+        // здесь пути для добавлению картинок в списке меню через v-for
+        {src: ''},
+        {src: ''}
       ]
     }
   }
